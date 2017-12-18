@@ -49,6 +49,10 @@ public class LinkedList {
         }
     }
 
+	public boolean equals (LinkedList other) {
+		return toString().equals(other.toString());
+	}
+	
     // while-style
     public String toString() {
         String result = "while-style: ( "; // enclosed in parens, like Racket

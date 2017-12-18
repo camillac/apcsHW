@@ -18,5 +18,7 @@ public class UserOfLinkedList {
 		// add Last
 		meow.addLast("nope");
 		System.out.println(meow);
+		
+		System.out.println(meow.equals(shopping));
     }
 }

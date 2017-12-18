@@ -17,6 +17,13 @@ public class NodeForLinkedList {
         cargoIsLinkedList = true;
     }
    
+	/*
+	HW51 0: Nodes should be equivalent if their string cargo is equal
+	or if they are both null.
+	*/
+	public boolean equals( NodeForLinkedList other ) {
+		return other.stringCargo.equals(stringCargo);
+   
     public String toString() {
         String result;
        
