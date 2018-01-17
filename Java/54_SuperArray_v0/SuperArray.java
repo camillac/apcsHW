@@ -17,7 +17,6 @@ public class SuperArray {
      */
     public SuperArray() {
 		_data = new int[10];
-		_size = _data.length;
     }
 
 
@@ -25,7 +24,12 @@ public class SuperArray {
       @return the number of elements in this list
      */
     public int size() {
-		return _size;
+		int ctr = _size - 1;
+		int last = 0;
+
+		if (_data[ctr]!=0)
+		    return _size;
+		while ( ctr
     }
 
 
