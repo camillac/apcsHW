@@ -47,7 +47,11 @@ public class UserOfBinarySearch {
                                                // Would be at position...
         String[] unknowns = { "Noman",         // somewhere in the interior
                               "AAAA Plumbing", // before the first entry
+<<<<<<< HEAD
                               "ZZ Top",        // after the last entry
+=======
+                              "zz top",        // after the last entry
+>>>>>>> e6f941c79282c7dd5c1b46351d2ea177e149ab85
         };
         for( String u : unknowns)
             System.out.println( "fail to find " + u 
