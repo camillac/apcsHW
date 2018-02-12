@@ -25,6 +25,16 @@ public class SkyView{
     public SkyView(int numRows, int numCols, double[] scanned){ 
         // solution 0
         // Loop through each row and col of view
+		view = new double[numRows][numCols];
+		for (int row = 0; row < numRows; row++) {
+			for (int col = 0; col < numCols; col++) {
+				if ((row % 2) == 0)
+					view[row][col] = scanned[col + row * numCols];
+				else
+					view[row][numCols - col - 1] = scanned[col+ row * numCols];
+			}
+		}
+							
     }
         
 
@@ -42,8 +52,17 @@ public class SkyView{
         
         // Use the modulus operator (%) and integer division
         // to calculate the destination row and column.
-        
+		int numCols =  scanned.length / numRows;
+        view = new double[numRows][numCols];
+		int row = 0;
+		for (int index = 0; index < scanned.length; index++){
+			row = index / numCols;
+			if ((row % 2) == 0)
+				view[row][index - (numCols * row)] = scanned[index];
+			else
+				view[row][numCols - (index - (numCols * row)) - 1] = scanned[index];
     }
+	}
         
 
     /** Returns the average of the values in a rectangular section of view.
