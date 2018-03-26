@@ -1,0 +1,272 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 String foo = \'93bar\'94\
+foo.indexOf(\'93b\'94) \'97> 0 \
+foo.indexOf(\'93a\'94) \'97> 1\
+foo.indexOf(\'93r\'94) \'97> 2 \
+foo.indexOf(\'93f\'94) \'97> -1\
+foo.indexOf(\'93ar\'94) \'97> \
+foo.indexOf(\'93arr\'94) \'97> \
+foo.indexOf(\'93bar\'94) \'97> \
+\'93bar\'94.indexOf(\'93b\'94) \'97> 1 \
+\'93babar\'94.indexOf(\'93a\'94) \'97> \
+\'93babar\'94.indexOf(\'93ba\'94) \'97> \
+\
+public int indexOf (String str)\
+returns index of first occurrence of str in calling String (the string preceding \'93.\'94)\
+returns -1 if str not found \
+\
+PIG LATIN RULES \
+1. Move leading consonant to end of vowel, append \'93ay\'94 \
+2. if word begins with vowel, append \'93yay\'94 \
+\
+final is a Java keyword to denote a CONSTANT (convention is to use CAPS to name constant vars) \
+private static final String VOWELS = \'93aeiou\'94 \
+public static void main (String[] args) \{ \
+	String letter  = \'93a\'94; \
+	for (String w : args) \{ \
+		System.out.println(W + \'93contains\'94;\
+\} \
+\} \
+\
+\
+\
+\
+\
+\
+to import a java class, \
+import 
+\i package.ClassName
+\i0 ; \
+note: must precede class definition \
+\
+import java.util.Scanner; \
+\
+public class ScannerTestDrive \{ \
+	public static void main (String [] args) \{ \
+		Scanner sc = new Scanner(System.in); \
+		while(sc.hasNext()) \{ \
+			System.out.println(sc.next()); \
+		\} \
+	\} \
+\} \
+\
+\
+\
+\
+\
+\
+Scanner - a handy java standard library class\
+2 of its most useful methods: \
+hasNext() returns whether or not there is another token in input stream \
+next() returns next token in input stream \
+\
+array is always a linear collection \
+you can\'92t modify an array in a foreach loop \
+\
+\
+\
+public int freqRec(int[] x, int target) \
+\{return freqHelper (___, x, target) ; \} \
+\
+public int freqHelper(____, int[]x, int target) \{ \
+\} \
+\
+\
+String[] wordList; \
+wordList.length = (compile error \'97> not initialized); \
+\
+String[] wordList2 = new String[3]; \
+wordList2.length = 3; \
+\
+array objects are assigned null if not assigned at all \
+break; \'97> breaks a while loop \
+\
+Wrapper class Integer \
+Integer x = new Integer(3); \
+or \
+Integer y = 3; //autoboxing\
+x ==y; //false because they have different hash codes now \
+//prim wrapper class overwrites equals \
+\
+\
+\
+\
+\
+\
+N: re: foo = bar; \
+Copying a primitive creates a copy (allocates new memory) \
+Copying an array creates an alias (allocates new memory) \
+Copying an Object creates an alias (does not allocate new memory) \
+Strings are an exception (it creates an alias but if one alias is changed, new memory is allocated) \
+\
+\
+\
+\
+Any high level language worth its salt: \
+EXCEPTION HANDLING \
+In Java: \
+try \{ \
+	//some code that may fail \
+\} \
+catch (
+\b Exception e
+\b0 ) \{ \
+	//what to if try block failed \
+	//\'97this can be empty\
+\} \
+\
+//only use when you don\'92t know what could happen \
+MAXIM: the catch block must work \
+MAXIM: Never use error handling if a conditional will do the job\
+IF and ONLY IF you have fully robustified your code \
+\
+In java, every (non-primitive) thing is an Object \
+Every class inherits the attributes and methods of class Object and optionally augments these attributes and methods \
+POLYMORPHISM allows sharing of information between classes \
+Java allows for subclasses and superclasses \
+Object is the mother of all superclasses \
+A subclass inherits all instance variables and methods from its superclass \
+A superclass is more generic/general than any of its subclasses \
+\
+Lingo for describing an inheritance relationship: \
+
+\i subclass
+\i0  \'93is-a\'94 
+\i superclass
+\i0 \
+i.e. String 
+\i is-a
+\i0  Object \
+A subclass extends its superclass \
+A subclass may extend only 1 superclass \
+\
+\
+\
+\
+\
+\
+\
+Github Flow: \
+pull work commit push \
+\
+to clone a repo (do once): \
+git clone ssh_clone_url [local_dir_name] \
+from inside an existing repo: \
+git pull \
+git status \
+git add path/to/file \
+git commit -am \'93commit msg\'94\
+git push \
+\
+\
+git status is your friend \
+PULL BEFORE YOU PUSH \
+all messed up? rm -rf <repo> \
+recline \
+\
+\
+Aim 11-13-17: Protect Your Inheritance and VTvOT \
+\
+ssh is secure shell protocol \
+bash is the shell  (Bourne Again Shell) \
+ \
+\
+cp -r v1 v2 \
+cd repo \
+ls -al \
+git clone \
+\
+\
+a subclass can provide new definition for an inherited method (aka overriding) \
+super() \
+\
+protected\'97> a protected instance variable is accessible by a class and all its subclasses \
+Character pat is new Protagonist() 		\'97>  allowed \
+Protagonist pat = new Character()		\'97>  not allowed \
+\
+\
+object type v. variable type. \
+variable type is what you declare \
+objet type is what gets instantiated \
+object type can match variable type or any subclass of declared variable type \
+\
+\
+Object o = new BankAccount() \
+if you know an object to be of a certain subclass, \
+((BankAccount)o).deposit(100); \
+you have to typecast first \
+\
+MAXIM: variable type tells you what you can use \
+determines what attributes and methods are available \
+MAXIM: object type tells you how it works \
+determines which implementation of the methods will be used \
+\
+\
+Making methods abstract \
+public abstract String speak(); \
+no body \
+\
+Declaring a class abstract allows you to make abstract methods \
+Including an abstract method in a class requires you to also make the class abstract \
+public abstract class Animal \{ \
+//instant vars. \
+public abstract String speak(); \
+// etc etc \
+\} \
+\
+you can\'92t instantiate an object of an abstract class bc you could be in danger of calling an abstract method which has NO body which is different from an EMPTY body \
+\
+a class that extends an abstract class MUST override all inherited abstract methods \
+\
+Making >= 1 method of a class abstract forces the class to become abstract \
+\
+Declaring a class abstract does not necessitate making any of its methods abstract \
+\
+no curly braces because it doesn\'92t do anything in the superclass \
+at the subclass level, you make the speak method specialized for that subclass \
+\
+\
+\
+passing by value (directing passing data) \
+passing by reference (passing a reference to a location of data) \
+\
+We concluded that 
+\b java is a language that is pass by value 
+\b0 \
+an array can be a collection of objects, arrays, and primitives \
+\
+2D Arrays \
+int[][] a = new int [numRows][numCols] \
+//rows correspond to top level elements \
+\
+how can we find the # of rows? \
+a.length \
+how can we find the # of columns? \
+b[0].length \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

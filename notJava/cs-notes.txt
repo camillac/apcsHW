@@ -1,0 +1,38 @@
+cs notes for wednesday, 2017-11-01
+
+0. How do you use local variables?
+- declaration within a block
+- no access (don't put public or pricate)
+- local scope (where a variable is known)
+	- this means it's only accessible within the block you declare it
+
+1. How do you use while loops?
+- iteration: the act of repeating a process
+- the results of one iteration are used to start the next iteration
+
+order for writing a while loop
+0. body 
+1. looping constant, while (boolean expression)
+2. update (so the expression eventually becomes false)
+3. initialization (local variables needed)
+
+-------------------------------------
+
+cs notes for thursday, 2017-11-02
+
+*reviewed code for yesterday's hw with a neighbor
+(official version posted on piazza @137)
+
+What characterizes...
+
+0. while-style definitions?
+- On each iteration, accumulate the current # in the total.
+- when describing, use phrases like while, until, next, for each
+
+1. recursive definitions?
+- define a large version of an entity in terms of a smaller version of the same entity
+- ends with a smallest version which is defined without recourse to any smaller version of the entity
+- when describing, mention
+	a) the size of the problem (n)
+	b) the next smaller-sized problem (n-1)
+	c) the smallest problem (0 or 1)

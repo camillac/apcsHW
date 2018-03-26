@@ -8,8 +8,23 @@ public class SubSortThenMerge_Sorter extends Sorter {
       specify the full extent of the list.
      */
     public void sort() {
-        // fix me
+		mergeSort(0, elements.length);
     }
+	
+	private void mergeSort(int start, int end){
+		//System.out.println("start: " + start + "   end: " + end);
+		if (end - start <= 1){
+			elements[start] = elements[start];
+		}
+		else {
+			int half = (start + end)/2;
+			mergeSort(start, half);
+			mergeSort(half, end);
+			merge(start, half, end);
+			
+		}
+	}
+		
     
    //  --------- code below here has already been tested ---------
    /** 
