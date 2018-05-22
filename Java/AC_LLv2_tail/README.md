@@ -1,0 +1,1 @@
+# *O*(1) access to the tail of a singly-linked list
